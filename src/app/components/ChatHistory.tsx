@@ -89,7 +89,7 @@ export default function ChatHistory({ currentChatId, onChatSelect, onNewChat }: 
     if (user) {
       loadChats();
     }
-  }, [user]);
+  }, [user, currentChatId]);
 
   const handleDeleteClick = (chatId: string, chatTitle: string) => {
     setDeleteConfirmation({
