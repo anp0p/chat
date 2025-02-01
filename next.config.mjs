@@ -25,12 +25,12 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "https://api.openai.com/:path*",
-      },
-    ];
+    return {
+      beforeFiles: [
+        // Remove the OpenAI proxy
+        // Keep other proxies if they exist
+      ]
+    }
   },
 };
 
