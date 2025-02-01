@@ -157,6 +157,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter)
-
 Project Link: [https://github.com/popand/popchat](https://github.com/popand/popchat)
