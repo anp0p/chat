@@ -1,3 +1,37 @@
+/**
+ * API Route: /api/replicate/chat
+ * 
+ * This route handles chat interactions with the DeepSeek AI model hosted on Replicate.
+ * It provides real-time streaming responses with support for thinking states and
+ * detailed model information.
+ * 
+ * Features:
+ * - Streaming responses using Edge Runtime
+ * - Support for thinking states (<think> tags)
+ * - Detailed model information in responses
+ * - Error handling and response cleaning
+ * 
+ * Model: deepseek-ai/deepseek-r1
+ * Provider: DeepSeek
+ * 
+ * Request Body:
+ * {
+ *   messages: Array<{ role: string, content: string }>
+ * }
+ * 
+ * Response Format:
+ * {
+ *   output: string,
+ *   isThinking: boolean,
+ *   modelInfo: {
+ *     id: string,
+ *     parameters: object,
+ *     provider: string,
+ *     type: string
+ *   }
+ * }
+ */
+
 import Replicate from 'replicate';
 
 export const runtime = 'edge';

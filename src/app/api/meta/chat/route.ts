@@ -1,3 +1,38 @@
+/**
+ * API Route: /api/meta/chat
+ * 
+ * This route handles chat interactions with Meta's LLaMA 3 model hosted on Replicate.
+ * It provides streaming responses with accumulated output and model information.
+ * 
+ * Features:
+ * - Streaming response accumulation
+ * - Advanced parameter configuration
+ * - Custom prompt templating
+ * - Performance metrics logging (optional)
+ * 
+ * Model: meta/meta-llama-3-70b
+ * Provider: Meta
+ * 
+ * Request Body:
+ * {
+ *   messages: Array<{ role: string, content: string }>
+ * }
+ * 
+ * Response Format:
+ * {
+ *   output: string,
+ *   modelInfo: {
+ *     id: string,
+ *     parameters: object,
+ *     provider: string,
+ *     type: string
+ *   }
+ * }
+ * 
+ * Note: This implementation uses a 70B parameter model with
+ * carefully tuned parameters for optimal response quality.
+ */
+
 import Replicate from 'replicate';
 
 export const runtime = 'edge';

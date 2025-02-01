@@ -1,3 +1,36 @@
+/**
+ * API Route: /api/google/chat
+ * 
+ * This route handles chat interactions with Google's Gemma model hosted on Replicate.
+ * It provides non-streaming responses with model information and parameter configuration.
+ * 
+ * Features:
+ * - Direct response (non-streaming)
+ * - Configurable model parameters
+ * - Detailed model information in responses
+ * - Error handling with detailed messages
+ * 
+ * Model: google-deepmind/gemma-7b
+ * Provider: Google DeepMind
+ * Version: 2ca65f463a2c0cfef4dbc4ba70d227ed96455ef6020c1f6983b2a4c4f3ecb4ec
+ * 
+ * Request Body:
+ * {
+ *   messages: Array<{ role: string, content: string }>
+ * }
+ * 
+ * Response Format:
+ * {
+ *   output: string,
+ *   modelInfo: {
+ *     id: string,
+ *     parameters: object,
+ *     provider: string,
+ *     type: string
+ *   }
+ * }
+ */
+
 import Replicate from 'replicate';
 
 export const runtime = 'edge';
