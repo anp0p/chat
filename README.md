@@ -2,7 +2,27 @@
 
 PopChat is a modern, real-time chat application that leverages multiple AI language models to provide intelligent conversations. Built with Next.js 14, TypeScript, and Tailwind CSS, it offers a seamless and responsive user experience with support for multiple AI models.
 
-![PopChat Banner](public/popchat-banner.png)
+## Screenshots
+
+### Main Chat Interface
+![Main Chat Interface](public/screenshots/main-chat.png)
+*The main chat interface showing the conversation with AI model responses and markdown support*
+
+### Model Selection
+![Model Selection](public/screenshots/model-selection.png)
+*Model selection interface with detailed information about each AI model*
+
+### Chat History
+![Chat History](public/screenshots/chat-history.png)
+*Sidebar showing chat history with delete functionality*
+
+### Response Information
+![Response Info](public/screenshots/response-info.png)
+*Detailed model information and processing metrics for each response*
+
+### Authentication
+![Sign In](public/screenshots/sign-in.png)
+*Secure Google authentication interface*
 
 ## Features
 
