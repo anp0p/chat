@@ -10,6 +10,7 @@ import { db } from '@/lib/firebase/firebase';
 import MessageInfo from './MessageInfo';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import type { ComponentProps } from 'react';
 import type { Components } from 'react-markdown';
 
 interface ExtendedChatMessage extends ChatMessage {
@@ -254,11 +255,14 @@ export default function Chat() {
                             remarkPlugins={[remarkGfm]}
                             components={{
                               p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
-                              code: ({inline, className, children, ...props}: Components['code'] & { inline?: boolean }) => (
-                                inline 
-                                  ? <code className="px-1 py-0.5 bg-gray-700/10 rounded text-sm" {...props}>{children}</code>
-                                  : <code className="block bg-gray-700/10 p-3 rounded-lg text-sm my-2 whitespace-pre-wrap" {...props}>{children}</code>
-                              ),
+                              code: ({node, inline, className, children}: any) => {
+                                const codeProps = {
+                                  className: inline 
+                                    ? "px-1 py-0.5 bg-gray-700/10 rounded text-sm"
+                                    : "block bg-gray-700/10 p-3 rounded-lg text-sm my-2 whitespace-pre-wrap"
+                                };
+                                return <code {...codeProps}>{children}</code>;
+                              },
                               pre: ({node, ...props}) => <pre className="bg-transparent p-0 my-0" {...props} />,
                               ul: ({node, ...props}) => <ul className="list-disc list-inside mb-2" {...props} />,
                               ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-2" {...props} />,
@@ -299,11 +303,14 @@ export default function Chat() {
                             remarkPlugins={[remarkGfm]}
                             components={{
                               p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
-                              code: ({inline, className, children, ...props}: Components['code'] & { inline?: boolean }) => (
-                                inline 
-                                  ? <code className="px-1 py-0.5 bg-gray-700/10 rounded text-sm" {...props}>{children}</code>
-                                  : <code className="block bg-gray-700/10 p-3 rounded-lg text-sm my-2 whitespace-pre-wrap" {...props}>{children}</code>
-                              ),
+                              code: ({node, inline, className, children}: any) => {
+                                const codeProps = {
+                                  className: inline 
+                                    ? "px-1 py-0.5 bg-gray-700/10 rounded text-sm"
+                                    : "block bg-gray-700/10 p-3 rounded-lg text-sm my-2 whitespace-pre-wrap"
+                                };
+                                return <code {...codeProps}>{children}</code>;
+                              },
                               pre: ({node, ...props}) => <pre className="bg-transparent p-0 my-0" {...props} />,
                               ul: ({node, ...props}) => <ul className="list-disc list-inside mb-2" {...props} />,
                               ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-2" {...props} />,

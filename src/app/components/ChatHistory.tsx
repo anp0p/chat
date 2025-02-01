@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useAuth } from '@/lib/hooks/useAuth';
 import { ChatSession, getUserChats, deleteChat } from '@/lib/firebase/firebaseUtils';
 
@@ -61,7 +61,7 @@ export default function ChatHistory({ currentChatId, onChatSelect, onNewChat }: 
     chatTitle: ''
   });
 
-  const loadChats = async () => {
+  const loadChats = useCallback(async () => {
     if (!user) {
       setLoading(false);
       return;
@@ -83,13 +83,13 @@ export default function ChatHistory({ currentChatId, onChatSelect, onNewChat }: 
     } finally {
       setLoading(false);
     }
-  };
+  }, [user]);
 
   useEffect(() => {
     if (user) {
       loadChats();
     }
-  }, [user, currentChatId]);
+  }, [user, currentChatId, loadChats]);
 
   const handleDeleteClick = (chatId: string, chatTitle: string) => {
     setDeleteConfirmation({
