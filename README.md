@@ -36,7 +36,7 @@ PopChat is a real-time chat application that leverages multiple AI language mode
   - Protected routes and conversations
   - User-specific chat history
 
-- 💬 **Advanced Chat Capabilities**
+- 💬 **Chat Capabilities**
   - Real-time streaming responses
   - Markdown support with syntax highlighting
   - Code block formatting
@@ -49,7 +49,7 @@ PopChat is a real-time chat application that leverages multiple AI language mode
   - Provider information
   - Real-time performance metrics
 
-- 🎨 **Modern UI/UX**
+- 🎨 **UI/UX**
   - Responsive design
   - Dark/Light mode support
   - Clean and intuitive interface
