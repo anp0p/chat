@@ -1,6 +1,6 @@
 # PopChat
 
-PopChat is a modern, real-time chat application that leverages multiple AI language models to provide intelligent conversations. Built with Next.js 14, TypeScript, and Tailwind CSS, it offers a seamless and responsive user experience with support for multiple AI models.
+PopChat is a real-time chat application that leverages multiple AI language models to provide intelligent conversations. Built with Next.js 14, TypeScript, and Tailwind CSS, it offers a seamless and responsive user experience with support for multiple AI models.  It currently integrates with Replicate to suppor deepseek-ai/deepseek-r1, meta/meta-llama-3-70b and google-deepmind/gemma-7b.
 
 ## Screenshots
 
