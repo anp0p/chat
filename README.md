@@ -133,28 +133,4 @@ The application can be easily deployed to Vercel:
 3. Add the environment variables in Vercel's project settings
 4. Deploy!
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Firebase](https://firebase.google.com/)
-- [Replicate](https://replicate.com/)
-- [React Markdown](https://github.com/remarkjs/react-markdown)
-
-## Contact
-
-Project Link: [https://github.com/popand/popchat](https://github.com/popand/popchat)
