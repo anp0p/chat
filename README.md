@@ -2,6 +2,11 @@
 
 Chat is a real-time chat application that leverages multiple AI language models to provide intelligent conversations. Built with Next.js 14, TypeScript, and Tailwind CSS, it offers a seamless and responsive user experience with support for multiple AI models.  It currently integrates with Replicate to suppor deepseek-ai/deepseek-r1, meta/meta-llama-3-70b and google-deepmind/gemma-7b.
 
+## Demo
+
+[![Chat App Demo](public/screenshots/main-chat.png)](https://youtu.be/mi8o1mwI1_E)
+
+
 ## Screenshots
 
 ### Main Chat Interface
@@ -23,6 +28,7 @@ Chat is a real-time chat application that leverages multiple AI language models 
 ### Authentication
 ![Sign In](public/screenshots/sign-in.png)
 *Secure Google authentication interface*
+
 
 ## Features
 
